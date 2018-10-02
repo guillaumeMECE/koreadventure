@@ -55,6 +55,9 @@ var adventure1 = new Adventure(1, 1000, 1, 2, "adventure1", 1);
 function test() {
    adventure1.earnMoney();
    adventure1.show();
+   
+   var db = firebase.database();
+   db.ref("team/0").update({ point: money });
 
 }
 

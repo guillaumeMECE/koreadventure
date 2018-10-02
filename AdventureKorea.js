@@ -67,6 +67,9 @@ function updatePoint(money) {
    document.getElementById("money").innerHTML = money;
 }
 
+window.onload = function() {
+  init();
+};
 function init() {
    // Get a reference to the database service
    var database = firebase.database();
@@ -75,5 +78,3 @@ function init() {
       updatePoint(snapshot.val());
    });
 }
-
-window.onload = init();

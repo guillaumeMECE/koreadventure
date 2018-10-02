@@ -70,8 +70,8 @@ function updatePoint(money) {
 function init() {
    // Get a reference to the database service
    var database = firebase.database();
-   var pointInit = firebase.database().ref('team/0');
-   pointInit.on('point', function(snapshot) {
+   var pointInit = firebase.database().ref('team/0/point');
+   pointInit.on('value', function(snapshot) {
       updatePoint(snapshot.val());
    });
 }
